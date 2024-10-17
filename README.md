@@ -88,9 +88,6 @@ To manage the project’s version control, I cloned the GitHub repository, initi
 # Clone the existing GitHub repository
 git clone https://github.com/your-username/repository.git
 
-# Initialize a new Git repository
-git init
-
 # Check the current status of the repository
 git status
 
@@ -103,12 +100,14 @@ git commit -m "Initial commit: Add cloned repo."
 
 #### 2.1.4 GitHub
 Finally, once I want to push the local repository to GitHub, to keep it backed up and share it with others, I write the following command:
+
 ```sh
 # If you want to push your changes to a remote repository (like GitHub), you need to add the remote URL.
 git push origin main
 ```
 
 ## 2.2: Extract the loans data from the cloud
+
 
 
 #### 2.2.1 Initialise a class to extract the data
