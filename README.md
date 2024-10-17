@@ -2,8 +2,8 @@
 
 ## Overview
 
-<p>This project involves an **Exploratory Data Analysis (EDA)** on the loan portfolio of a financial institution.<br>The aim is to analyse loan data to identify trends, relationships, and anomalies that could assist in making more informed decisions related to (1) loan approvals, (2) pricing, and (3) risk management. By conducting this EDA, insights into loan performance and risk will be gained, ultimately improving the institution's loan portfolio management.</p>
-
+<p>This project involves an <i>Exploratory Data Analysis (EDA)</i> on the loan portfolio of a financial institution.<br>The aim is to analyse loan data to identify trends, relationships, and anomalies that could assist in making more informed decisions related to (1) loan approvals, (2) pricing, and (3) risk management. By conducting this EDA, insights into loan performance and risk will be gained, ultimately improving the institution's loan portfolio management.</p>
+<br>
 **Credits**
 <p>The knowledge contained in this repository was primarily taught by <a href='https://www.theaicore.com' > AiCore</a>, and I am immensely grateful to them for their teaching and support in my continous professional development.</p>
 
