@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 class DataTransform:
     def __init__(self, df):
@@ -24,7 +25,7 @@ class DataTransform:
         Returns:
         None: Updates the DataFrame in place.
         """
-        self.df['term'] = self.df['term'].str.replace(' months', '', regex=False).astype(float)
+        self.df['term'] = self.df['term'].str.replace('months', '', regex=False).astype(float)
 
     def convert_to_categorical(self, column_list):
         """
@@ -55,3 +56,27 @@ class DataTransform:
                 self.df[column] = self.df[column].fillna(fill_value)
             else:
                 self.df[column] = self.df[column]  # No action taken, just leaves NaN in place.
+                
+    def clean_employment_length(self):
+        """
+        Cleans the 'employment_length' column by converting strings to numeric values.
+        - Replaces '10+ years' with 10
+        - Replaces '< 1 year' with 0.5
+        - Replaces 'n/a' or any missing values with NaN
+        - Removes ' years' or ' year' from the strings
+        - Converts the column to float type
+        """
+        
+        # Replace specific strings with numeric equivalents
+        self.df['employment_length'] = self.df['employment_length'].replace({
+            '10+ years': '10',
+            '< 1 year': '0.5',
+            'n/a': np.nan
+        })
+
+        # Remove ' years' or ' year' from the strings
+        self.df['employment_length'] = self.df['employment_length'].str.replace(' years', '', regex=False)
+        self.df['employment_length'] = self.df['employment_length'].str.replace(' year', '', regex=False)
+
+        # Convert the column to float
+        self.df['employment_length'] = self.df['employment_length'].astype(float)
