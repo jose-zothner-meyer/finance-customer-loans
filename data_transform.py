@@ -75,8 +75,8 @@ class DataTransform:
         })
 
         # Remove ' years' or ' year' from the strings
-        self.df['employment_length'] = self.df['employment_length'].str.replace(' years', '', regex=False)
-        self.df['employment_length'] = self.df['employment_length'].str.replace(' year', '', regex=False)
+        self.df['employment_length'] = self.df['employment_length'].str.replace('years', '', regex=False)
+        self.df['employment_length'] = self.df['employment_length'].str.replace('year', '', regex=False)
 
         # Convert the column to float
         self.df['employment_length'] = self.df['employment_length'].astype(float)
